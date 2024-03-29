@@ -1,0 +1,57 @@
+#heroWithHeader {
+  background-image: url("../../assets/julia-solonina-Csja8O0sbOw-unsplash\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  object-fit: cover;
+
+  .heroWithHeader {
+    color: white;
+    background: rgb(255 255 255 / 20%);
+    padding: 1rem 0;
+
+    .actions {
+      ul {
+        li {
+          button {
+            padding: 0.7rem 2rem;
+            color: #fff;
+            border-radius: 30px;
+            border: 0;
+            font-size: 16px;
+            background-color: var(--orange-color);
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    // height: 400px;
+    padding-bottom: 6rem;
+
+    .itsHeader {
+      margin: 3rem 0;
+      text-align: center;
+      color: #fff;
+      h1 {
+        font-family: "Podcast", sans-serif;
+        font-size: 72px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+
+    .itsSearch {
+      padding: 1rem;
+      background: #ffffff20;
+      border-radius: 20px;
+    }
+  }
+
+  @media only screen and (max-width:991px) {
+    
+  }
+}

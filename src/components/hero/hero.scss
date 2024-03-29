@@ -1,0 +1,29 @@
+.heroWithHeader{
+
+  .MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer{
+    border-radius: 20px 20px 0 0 ;
+
+    button#simple-tab-0{
+      background: white;
+    }
+
+    button#simple-tab-1{
+      background: #ffffff40;
+      // color: #fff;
+      border-top-right-radius: 20px;
+    }
+
+    button:first-child{
+      background-color: #fff;
+      border-top-left-radius: 20px;
+    }
+
+  }
+
+  .MuiBox-root.css-19kzrtu{
+    background-color: #fff;
+    border-radius: 0 20px 20px 20px;
+  }
+
+}
+
