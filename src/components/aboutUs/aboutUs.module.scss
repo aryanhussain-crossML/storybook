@@ -1,0 +1,43 @@
+#aboutUs{
+  .aboutUs{
+
+    margin: 3rem 0;
+
+    .mapGirl{
+      width: 80%;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .itsDescription{
+      padding-left: 2%;
+      color: #333333;
+      h5{
+        padding-bottom: 1rem;
+        line-height: 22px;
+        font-weight: 600;
+      }
+      h2{
+        font-weight: 800;
+        font-size: 32px;
+      }
+      p{
+        padding: 1rem 0;
+        font-size: 18px;
+        line-height: 32px;
+      }
+
+      .itsCard{
+        h2{
+          color: var(--orange-color);
+        }
+      }
+    }
+
+    @media only screen and (max-width:991px){
+      flex-direction: column;
+    }
+  }
+}

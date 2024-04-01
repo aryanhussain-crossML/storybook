@@ -4,14 +4,49 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import "./basicTabs.scss";
-import styles from "./basicTabs.module.scss"
+import styles from "./basicTabs.module.scss";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-import { People, searchIcon } from "../../assets/icons";
+import { calendarIcon, searchIcon, clockIcon, tourIcon, carIcon, People } from "../../assets/icons";
+import FilterCard from "../filterCards/filterCard";
+
+
+const filterData = [
+  {
+    icon: People, // Replace with your actual icon component
+    title: "Number of People",
+    value: "Choose Number", // This should be a state variable
+    onChange: "handlePeopleChange", // This should be a function that updates the state
+  },
+  {
+    icon: calendarIcon, // Replace with your actual icon component
+    title: "Date",
+    value: "Choose Date", // This should be a state variable
+    onChange: "handleEventDateChange", // This should be a function that updates the state
+  },
+  {
+    icon: clockIcon, // Replace with your actual icon component
+    title: "Time",
+    value: "Choose Time", // This should be a state variable
+    onChange: "handleLocationChange", // This should be a function that updates the state
+  },
+  {
+    icon: tourIcon, // Replace with your actual icon component
+    title: "Tour",
+    value: "Select Tour", // This should be a state variable
+    onChange: "handleFavoritesChange", // This should be a function that updates the state
+  },
+  {
+    icon: carIcon, // Replace with your actual icon component
+    title: "Transportation",
+    value: "Select Transportation", // This should be a state variable
+    onChange: "handleFavoritesChange", // This should be a function that updates the state
+  },
+];
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,38 +102,23 @@ export function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <div className={`${styles.customTabPanel} d-flex justify-between align-items-center gap-5 w-100`} >
-          <div className={`${styles.d} d-flex flex-item`} >
-            {Array.from({ length: 4 }, (_, index) => (
-              <div key={index} className={`${styles.filterCard} flex-item`} >
-                <div className={`${styles.fc_upper} d-flex flex-column`} >
-                  {People}
-                  <h5>Numbers of people</h5>
-
-                  <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                    <InputLabel id="demo-select-small-label">
-                      Choose Number
-                    </InputLabel>
-                    <Select
-                      labelId="demo-select-small-label"
-                      id="demo-select-small"
-                      value={age}
-                      label="Age"
-                      onChange={handleChange2}
-                    >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-                  </FormControl>
-                </div>
-              </div>
+        <div
+          className={`${styles.customTabPanel} d-flex justify-between align-items-center gap-5 w-100`}
+        >
+          <div className={`${styles.d} d-flex flex-item`}>
+            {filterData.map((item, index) => (
+              <FilterCard
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                value={item.value}
+                onChange={item.onChange}
+              />
             ))}
           </div>
-          <div className={`${styles.searchIcon} d-flex justify-center align-items-center align-self-end`} >
+          <div
+            className={`${styles.searchIcon} d-flex justify-center align-items-center align-self-end`}
+          >
             {searchIcon}
           </div>
         </div>

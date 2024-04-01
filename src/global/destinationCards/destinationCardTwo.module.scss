@@ -1,0 +1,44 @@
+.destinationCard {
+  .down {
+    padding: 1rem 0;
+    .price {
+      padding: 0.5rem 0;
+      span {
+        color: var(--orange-color);
+        font-weight: 900;
+        font-size: 20px;
+      }
+    }
+
+    .someDetails {
+      color: var(--orange-color);
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left {
+        svg {
+          margin-right: 0.5rem;
+          path {
+            &:first-child {
+              fill: var(--orange-color) !important;
+              padding-right: 1rem;
+            }
+          }
+        }
+      }
+
+      .right {
+        svg path {
+          stroke: var(--orange-color);
+        }
+      }
+    }
+    .caption {
+      padding: 0.5rem 0;
+    }
+  }
+}

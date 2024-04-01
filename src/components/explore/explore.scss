@@ -1,0 +1,36 @@
+.explore {
+
+  .slick-slide{
+    padding: 0 1rem;
+  }
+
+  .slick-prev {
+    right: 140px;
+    left: auto;
+  }
+  .slick-next {
+    right: 60px;
+
+    &::before{
+      content: ">" !important;
+      font-size: 20px !important;
+      font-weight: 900 !important;
+    }
+  }
+
+  button.slick-arrow {
+    &::before {
+      content: "<";
+      font-weight: 900;
+      -webkit-text-stroke: 2px rgb(255, 255, 255);
+      // color: #424d5c !important;
+      // font-size: 40px;
+    }
+
+    &::after {
+      content: ">" !important;
+      // color: rgb(119, 119, 119) !important;
+      // font-size: 40px;
+    }
+  }
+}
