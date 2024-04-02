@@ -1,0 +1,17 @@
+#services{
+  .services{
+    margin: 3rem 0;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width:991px){
+    .services{
+      div{
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

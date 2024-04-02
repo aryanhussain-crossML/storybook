@@ -1,0 +1,61 @@
+#bookBike{
+  background: linear-gradient(0deg, #ffb986, #ffdbaf);
+  .bookBike{
+    
+    padding: 3rem 0;
+    color: #333;
+    .left{
+      width: 50%;
+
+      .contactUsCard{
+        text-align: center;
+        background: #ffffff50;
+        width: 70%;
+        padding: 1rem;
+        border-radius: 24px;
+
+        h3{
+          font-size: 32px;
+          font-weight: 800;
+          line-height: 44px;
+          margin: 1.5rem 0;
+        }
+
+        button{
+          background: var(--orange-color);
+          border: 0;
+          color: white;
+          border-radius: 24px;
+          padding: 1rem 2.5rem;
+          font-size: 18px;
+          margin: 1.5rem 0;
+        }
+      }
+    }
+
+    .right{
+      position: relative;
+      img{
+        position: absolute;
+        right: 0;
+        bottom: -71px;
+        height: 80%;
+      }
+    }
+
+    @media only screen and (max-width:1250px){
+      .left{
+        width: 100%;
+        .contactUsCard{
+          width: 100%;
+        }
+      }
+      .right{
+        img{
+          display: none;
+        }
+      }
+    }
+
+  }
+}

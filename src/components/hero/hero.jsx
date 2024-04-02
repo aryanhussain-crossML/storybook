@@ -64,6 +64,12 @@ const Hero = () => {
               <li>About Us</li>
               <li>Tour Packages</li>
               <li>Contact Us</li>
+              <li className={`${styles.actionsMobile}`}>
+                <ul className="yet nothing">
+                  <li>Login</li>
+                  <li>Sign Up</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>

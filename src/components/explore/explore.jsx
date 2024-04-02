@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import { Box } from "@mui/material";
 import Slider from "react-slick";
 import DestinationsCards from "../../global/destinationCards/destinationsCards";
 import cycle from "../../assets/explore/cycle.png";

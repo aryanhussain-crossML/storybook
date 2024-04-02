@@ -1,0 +1,41 @@
+#footer{
+  background: #333;
+
+  .footer{
+    padding: 4rem 0;
+    color: #fff;
+
+
+    .imgCon{
+    padding-bottom: 1rem;
+    }
+
+    .footerColumns{
+      padding: 1rem 0;
+      border-top: 1px solid #ffffff4a;
+      border-bottom: 1px solid #ffffff4a;
+      flex-wrap: wrap;
+      .linksContainer{
+        h5{
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 30px;
+          margin: 1rem 0;
+        }
+        ul{
+          li{
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .copyright{
+      padding: 2rem 0;
+      text-align: center;
+    }
+  }
+}

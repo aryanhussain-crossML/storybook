@@ -1,0 +1,39 @@
+.testimonialCard {
+  border: 1px solid rgb(210, 210, 210);
+  padding: 2rem;
+  border-radius: 24px;
+  color: #333;
+
+  .upper {
+    margin: 0 auto;
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .lower {
+    margin: 2rem 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(../../assets/testimonial/Quotes.svg);
+      height: 28px;
+      width: 40px;
+      top: -42px;
+      left: 0;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      background: url(../../assets/testimonial/Quotes.svg);
+      height: 28px;
+      width: 40px;
+      bottom: -42px;
+      right: 0;
+    }
+  }
+}

@@ -1,5 +1,6 @@
-.explore {
-  .slick-slide {
+.testimonial {
+
+  .slick-slide{
     padding: 0 1rem;
   }
 
@@ -10,7 +11,7 @@
   .slick-next {
     right: 60px;
 
-    &::before {
+    &::before{
       content: ">" !important;
       font-size: 20px !important;
       font-weight: 900 !important;
@@ -36,7 +37,7 @@
   @media only screen and (max-width: 768px) {
     .slick-slide{
       img{
-        width: 100%;
+        // width: 100%;
       }
     }
 

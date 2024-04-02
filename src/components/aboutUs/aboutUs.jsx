@@ -1,4 +1,3 @@
-import React from "react";
 import mapGirl from "../../assets/about picture.png"
 import styles from "./aboutUs.module.scss"
 

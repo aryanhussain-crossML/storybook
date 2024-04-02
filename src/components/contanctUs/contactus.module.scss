@@ -1,0 +1,96 @@
+#contactus {
+  background: linear-gradient(0deg, #ffb986, #ffdbaf);
+  .contactus {
+    // overflow-y: hidden;
+    // overflow-x: visible;
+    padding: 3rem 0;
+    color: #333;
+    .left {
+      width: 50%;
+      .contactUsCard {
+        text-align: center;
+        background: #ffffff54;
+        width: 70%;
+        padding: 1rem;
+        border-radius: 24px;
+
+        h3 {
+          font-size: 32px;
+          font-weight: 800;
+          line-height: 44px;
+          margin: 1.5rem 0;
+        }
+
+        button {
+          background: var(--orange-color);
+          border: 0;
+          color: white;
+          border-radius: 24px;
+          padding: 1rem 2.5rem;
+          font-size: 18px;
+          margin: 1.5rem 0;
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+      img {
+        position: absolute;
+        right: 0;
+        top: -190px;
+        height: 580px;
+        width: 412px;
+      }
+    }
+
+    @media only screen and (max-width: 1400px) {
+      .right {
+        img {
+          top: -167px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1200px) {
+      .right {
+        img {
+          top: -143px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1073px) {
+      .right {
+        img {
+          top: -99px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1009px) {
+      .left {
+        justify-content: start;
+        width: 80%;
+      }
+      .right {
+        img {
+          top: -78px;
+          height: 467px;
+          width: 368px;
+        }
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      .left {
+        width: 100%;
+        justify-content: center;
+        .contactUsCard{
+          width: 100%;
+        }
+      }
+      .right {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

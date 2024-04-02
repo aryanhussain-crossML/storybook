@@ -6,11 +6,6 @@ import Box from "@mui/material/Box";
 import "./basicTabs.scss";
 import styles from "./basicTabs.module.scss";
 
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-
 import { calendarIcon, searchIcon, clockIcon, tourIcon, carIcon, People } from "../../assets/icons";
 import FilterCard from "../filterCards/filterCard";
 
