@@ -1,20 +1,40 @@
-#popularPackages{
-  .popularPackages{
+#popularPackages {
+  .popularPackages {
     margin: 3rem 0;
 
-    h2{
+    h2 {
       font-size: 32px;
       font-weight: 800;
       line-height: 44px;
       margin: 1rem 0;
     }
 
-    .packagesContainer{
+    .packagesContainer {
       flex-wrap: wrap;
+
+      > div {
+        width: 23%;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
-    @media only screen and (max-width:991px){
-      
+    @media only screen and (max-width: 1200px) {
+      .packagesContainer {
+        > div {
+          width: 48%;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      .packagesContainer {
+        > div {
+          width: 100%;
+        }
+      }
     }
   }
 }

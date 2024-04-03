@@ -11,10 +11,20 @@
     background: rgb(255 255 255 / 20%);
     padding: 1rem 0;
 
+
+    .menus{
+      ul{
+        li{
+          cursor: pointer;
+        }
+      }
+    }
     .actions {
       ul {
         li {
+          cursor: pointer;
           button {
+            cursor: pointer;
             padding: 0.7rem 2rem;
             color: #fff;
             border-radius: 30px;

@@ -9,43 +9,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 
-// const ProSpan = styled("span")({
-//   display: "inline-block",
-//   height: "1em",
-//   width: "1em",
-//   verticalAlign: "middle",
-//   marginLeft: "0.3em",
-//   marginBottom: "0.08em",
-//   backgroundSize: "contain",
-//   backgroundRepeat: "no-repeat",
-//   backgroundImage: "url(https://mui.com/static/x/pro.svg)",
-// });
 
-// function Label({ componentName, valueType, isProOnly }) {
-//   const content = (
-//     <span>
-//       <strong>{componentName}</strong> for {valueType} editing
-//     </span>
-//   );
-
-//   if (isProOnly) {
-//     return (
-//       <Stack direction="row" spacing={0.5} component="span">
-//         <Tooltip title="Included on Pro package">
-//           <a
-//             href="https://mui.com/x/introduction/licensing/#pro-plan"
-//             aria-label="Included on Pro package"
-//           >
-//             <ProSpan />
-//           </a>
-//         </Tooltip>
-//         {content}
-//       </Stack>
-//     );
-//   }
-
-//   return content;
-// }
 
 const FilterCard = ({ icon, title, value, onChange }) => {
   return (
@@ -61,7 +25,7 @@ const FilterCard = ({ icon, title, value, onChange }) => {
             (title === "Number of People" ||
               title === "Tour" ||
               title === "Transportation") && (
-              <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+              <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }} size="small">
                 <InputLabel id="demo-select-small-label">
                   Choose Number
                 </InputLabel>
@@ -69,7 +33,7 @@ const FilterCard = ({ icon, title, value, onChange }) => {
                   labelId="demo-select-small-label"
                   id="demo-select-small"
                   value={value}
-                  label="Age"
+                  // label="Age"
                   onChange={onChange}
                 >
                   <MenuItem value="">
@@ -83,7 +47,7 @@ const FilterCard = ({ icon, title, value, onChange }) => {
             )}
 
           {title && title === "Date" && (
-            <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <FormControl className={`${styles.padder}`} sx={{ m: 1, minWidth: 120 }} size="small">
               <InputLabel id="demo-select-small-label"></InputLabel>
               <div components={["DatePicker"]}>
                 <DatePicker />
@@ -92,7 +56,7 @@ const FilterCard = ({ icon, title, value, onChange }) => {
           )}
 
           {title && title === "Time" && (
-            <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <FormControl className={`${styles.padder}`} sx={{ m: 1, minWidth: 120 }} size="small">
               <InputLabel id="demo-select-small-label"></InputLabel>
               <div components={["TimePicker"]}>
                 <TimePicker />

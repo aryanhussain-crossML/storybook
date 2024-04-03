@@ -43,6 +43,9 @@ a {
 }
 
 /* Common Classes */
+button{
+  cursor: pointer;
+}
 
 /* Flex container */
 .d-flex {

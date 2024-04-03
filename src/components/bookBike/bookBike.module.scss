@@ -10,8 +10,8 @@
       .contactUsCard{
         text-align: center;
         background: #ffffff50;
-        width: 70%;
-        padding: 1rem;
+        width: 100%;
+        padding: 1rem 2rem;
         border-radius: 24px;
 
         h3{
@@ -57,5 +57,10 @@
       }
     }
 
+    @media only screen and (max-width:991px){
+      .flexCol{
+        flex-direction: column;
+      }
+    }
   }
 }

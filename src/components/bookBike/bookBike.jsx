@@ -1,5 +1,6 @@
 import bikePic from "../../assets/services/bike picture.png";
 import styles from "./bookBike.module.scss";
+import "./bookBike.scss";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useState } from "react";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -52,7 +53,7 @@ const BookBike = () => {
   return (
     <section id={styles.bookBike}>
       <div className={`${styles.container} container`}>
-        <div className={`${styles.bookBike} d-flex justify-between`}>
+        <div className={`${styles.bookBike} bookBike d-flex justify-between`}>
           <div
             className={`${styles.left} d-flex justify-center align-items-center`}
           >
@@ -60,53 +61,119 @@ const BookBike = () => {
               <h3>Book Now Bike</h3>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <form onSubmit={handleSubmit}>
-                  <Box sx={{ display: "flex",justifyContent:"space-between",gap:"1rem" }}>
-                    <TextField
-                      label="Name"
-                      variant="outlined"
-                      margin="normal"
-                      fullWidth
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                    />
-                    <TextField
-                      label="Email Address"
-                      variant="outlined"
-                      margin="normal"
-                      fullWidth
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      type="email"
-                      required
-                    />
+                  <Box
+                    className={`${styles.flexCol}`}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: "2rem",
+                      paddingBottom: "1rem",
+                    }}
+                  >
+                    <div className="filedWrapper w-100">
+                      <InputLabel
+                        sx={{ textAlign: "left", fontWeight: "600" }}
+                        id="select-name"
+                      >
+                        Name
+                      </InputLabel>
+                      <TextField
+                        sx={{
+                          background: "#fff",
+                          borderRadius: "5px",
+                        }}
+                        label="Name"
+                        labelId="select-name"
+                        variant="outlined"
+                        margin="dense"
+                        fullWidth
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="filedWrapper w-100">
+                      <InputLabel
+                        sx={{ textAlign: "left", fontWeight: "600" }}
+                        id="select-email"
+                      >
+                        Email Address
+                      </InputLabel>
+                      <TextField
+                        sx={{
+                          background: "#fff",
+                          borderRadius: "5px",
+                        }}
+                        label="Email "
+                        labelId="select-email"
+                        variant="outlined"
+                        margin="dense"
+                        fullWidth
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        type="email"
+                        required
+                      />
+                    </div>
                   </Box>
 
-                  <Box sx={{ display: "flex",justifyContent:"space-between",gap:"1rem" }}>
-                    <TextField
-                      label="Phone Number"
-                      variant="outlined"
-                      margin="normal"
-                      fullWidth
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      type="tel"
-                      required
-                    />
-                    <FormControl variant="outlined" margin="normal" fullWidth>
-                      <InputLabel id="service-type-label">
+                  <Box
+                    className={`${styles.flexCol}`}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: "2rem",
+                      paddingBottom: "1rem",
+                    }}
+                  >
+                    <div className="filedWrapper w-100">
+                      <InputLabel
+                        sx={{ textAlign: "left", fontWeight: "600" }}
+                        id="phoneNumber"
+                      >
+                        Phone Number
+                      </InputLabel>
+                      <TextField
+                        sx={{
+                          background: "#fff",
+                          borderRadius: "5px",
+                        }}
+                        label="Phone Number"
+                        labelId="phoneNumber"
+                        variant="outlined"
+                        margin="dense"
+                        fullWidth
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        type="tel"
+                        required
+                      />
+                    </div>
+
+                    <div className="filedWrapper w-100">
+                      <InputLabel
+                        sx={{ textAlign: "left", fontWeight: "600" }}
+                        id="service-type-label"
+                      >
                         Service Type
                       </InputLabel>
                       <Select
                         labelId="service-type-label"
                         id="service-type"
                         name="serviceType"
+                        // margin="normal"
+                        sx={{
+                          margin: "0.5rem 0",
+                          background: "#fff",
+                        }}
                         value={formData.serviceType}
                         onChange={handleChange}
                         label="Service Type"
+                        variant="outlined"
+                        fullWidth
                         required
                       >
                         {services.map((service) => (
@@ -115,22 +182,71 @@ const BookBike = () => {
                           </MenuItem>
                         ))}
                       </Select>
-                    </FormControl>
+                    </div>
                   </Box>
 
-                  <Box sx={{ display: "flex",justifyContent:"space-between",gap:"1rem" }}>
-                    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                      <InputLabel id="demo-select-small-label"></InputLabel>
-                      <div components={["DatePicker"]}>
-                        <DatePicker />
-                      </div>
-                    </FormControl>
-                    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                      <InputLabel id="demo-select-small-label"></InputLabel>
-                      <div components={["TimePicker"]}>
-                        <TimePicker />
-                      </div>
-                    </FormControl>
+                  <Box
+                    className={`${styles.flexCol}`}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: "2rem",
+                      paddingBottom: "1rem",
+                    }}
+                  >
+                    <div className="filedWrapper w-100">
+                      <InputLabel
+                        sx={{ textAlign: "left", fontWeight: "600" }}
+                        id="demo-select-small-label"
+                      >
+                        Date
+                      </InputLabel>
+                      <FormControl
+                        sx={{
+                          margin: "0.5rem 0",
+                          minWidth: 120,
+                          width: "100%",
+                        }}
+                        size="small"
+                      >
+                        <div components={["DatePicker"]}>
+                          <DatePicker
+                            sx={{
+                              background: "#fff",
+                              borderRadius: "5px",
+                              width: "100%",
+                            }}
+                          />
+                        </div>
+                      </FormControl>
+                    </div>
+
+                    <div className="filedWrapper w-100">
+                      <InputLabel
+                        sx={{ textAlign: "left", fontWeight: "600" }}
+                        id="demo-select-small-label"
+                      >
+                        Time
+                      </InputLabel>
+                      <FormControl
+                        sx={{
+                          margin: "0.5rem 0",
+                          minWidth: 120,
+                          width: "100%",
+                        }}
+                        size="small"
+                      >
+                        <div components={["TimePicker"]}>
+                          <TimePicker
+                            sx={{
+                              background: "#fff",
+                              borderRadius: "5px",
+                              width: "100%",
+                            }}
+                          />
+                        </div>
+                      </FormControl>
+                    </div>
                   </Box>
 
                   <Button
