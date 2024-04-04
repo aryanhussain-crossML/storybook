@@ -1,0 +1,153 @@
+.modalSignUpIn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #333333cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  color: var(--traditional-black);
+
+  .itsWrapper {
+    background: #fff;
+    border-radius: 24px;
+    width: 600px;
+    padding: 3rem;
+
+    .headingWithClose {
+      .h1 {
+        font-size: 32px;
+      }
+      .close {
+        font-size: 35px;
+        cursor: pointer;
+        color: #3333333f;
+      }
+    }
+
+    .form {
+      .fields {
+        margin: 1rem 0;
+
+        label {
+          margin-bottom: 0.5rem;
+          display: block;
+          font-weight: 500;
+          color: #33333366;
+          font-size: 18px;
+        }
+        input {
+          padding: 1rem;
+          width: 100%;
+          border-radius: 10px;
+          border: 1px solid #33333365;
+        }
+      }
+
+      .eyeChecker {
+        position: relative;
+        svg {
+          position: absolute;
+          right: 17px;
+          top: 55.33%;
+        }
+      }
+
+      .forgetPassword {
+        text-align: right;
+        a {
+          color: #33333365;
+        }
+      }
+      .termsandpolicy {
+        label {
+          padding-left: 1rem;
+          span {
+            color: var(--orange-color);
+          }
+        }
+      }
+
+      .button {
+        text-align: center;
+        color: #33333365;
+        button {
+          margin: 1rem 0;
+          width: 100%;
+          padding: 1rem;
+          border-radius: 50px;
+          border: 0;
+          background: var(--orange-color);
+          color: #fff;
+          font-size: 18px;
+        }
+
+        .googleSvg > :nth-child(2) {
+          flex: 1;
+        }
+      }
+
+      .alreadyAccount {
+        text-align: center;
+        span {
+          color: var(--orange-color);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:768px){
+    .itsWrapper{
+      width: 400px;
+      padding: 2rem;
+    }
+  }
+
+  @media only screen and (max-width:450px){
+    .itsWrapper{
+      width: 400px;
+      padding: 2rem;
+    }
+  }
+}
+
+// ForgetPasswordModal
+
+.forgetPasswordModal {
+  // text-align: center;
+  .icon {
+    text-align: center;
+  }
+
+  .headingWithClose{
+  
+    .h1{
+      flex: 1;
+      text-align: center;
+    }
+    
+  }
+
+  .message{
+    text-align: center;
+  }
+
+  .resendLink{
+    margin: 0.5rem 0;
+    text-align: center;
+    span{
+      color: var(--orange-color);
+    }
+  }
+
+  .alreadyAccount {
+    a {
+      cursor: pointer;
+      color: #33333365;
+      font-size: 16px;
+    }
+  }
+}

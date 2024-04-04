@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./hero.module.scss";
 import "./hero.scss";
 import logo from "../../assets/Layer 1.svg";
 import { BasicTabs } from "../../global/basicTabs/basicTabs";
+import Modal from "../../global/modal/modal";
 
 const Hero = () => {
-  const props = { value: 0, index: 2, children: "Item Three" };
-  // const { children, value, index, ...other } = props;
-
+  const [openModal, setOpenModal] = useState(false);
+  const [currentModal, setCurrentModal] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = (value) => {
+    console.log(value, "check something is happening or not");
+    setOpenModal(true);
+    setCurrentModal(value);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,6 +26,9 @@ const Hero = () => {
         <div
           className={`${styles.container} container d-flex justify-between align-items-center`}
         >
+          {openModal && (
+            <Modal currentModal={currentModal} setOpenModal={setOpenModal} />
+          )}
           <div className={`${styles.logo}`}>
             <img src={logo} height={80} width={80} alt="logo not found" />
           </div>
@@ -34,8 +43,8 @@ const Hero = () => {
           <div className={`${styles.actions}`}>
             <ul className="d-flex gap-5 align-items-center">
               <li>Eng</li>
-              <li>Login</li>
-              <li>
+              <li onClick={() => handleOpenModal("login")}>Login</li>
+              <li onClick={() => handleOpenModal("signUp")}>
                 <button>Sign Up</button>
               </li>
             </ul>
