@@ -75,8 +75,8 @@ const Hero = () => {
               <li>Contact Us</li>
               <li className={`${styles.actionsMobile}`}>
                 <ul className="yet nothing">
-                  <li>Login</li>
-                  <li>Sign Up</li>
+                  <li onClick={() => handleOpenModal("login")}>Login</li>
+                  <li onClick={() => handleOpenModal("signUp")}>Sign Up</li>
                 </ul>
               </li>
             </ul>
